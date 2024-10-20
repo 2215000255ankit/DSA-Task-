@@ -1,0 +1,14 @@
+import java.util.Arrays;
+
+class Solution {
+    public int buyChoco(int[] prices, int money) {
+        Arrays.sort(prices);
+        int pr = prices[0] + prices[1];
+
+        if (pr > money) {
+            return money;
+        } else {
+            return money - pr;
+        }
+    }
+}
